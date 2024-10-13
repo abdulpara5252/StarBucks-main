@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarBucks</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- <div class="loader"></div> -->
+    <div class="loader1" id="loader1">
+        <img src="./img/logo (2).png" alt="Starbucks Logo" class="loader-image">
+    </div>
+    <div class="circular"></div>
+
+    <img src="./img/logo (2).png" class="logo" alt="logo starbucks">
+
+    <div class="container">
+
+        <div class="main-text">
+            <h2 class="fade-in">It's not just Coffee <br>
+                It's <span>Starbucks</span></h2>
+            <p class="fade-in">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere dicta consequuntur nobis consequatur
+            fugit id, saepe aperiam vel earum! Reiciendis eos esse recusandae repellat veniam dignissimos maiores dolor odit quaerat.</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="main-image">
+            <img src="./img/img1.png" class="starbucks" alt="starbucks">
+        </div>
+
+    </div>
+
+    <div class="menu">
+        <img src="./img/thumb1.png" class="menu-image" onclick="trocaImagem('./img/img1.png'); trocaCor('#017143')" alt="starbucks verde">
+        <img src="./img/thumb2.png" class="menu-image" onclick="trocaImagem('./img/img2.png'); trocaCor('#eb7495')" alt="starbucks rose">
+        <img src="./img/thumb3.png" class="menu-image" onclick="trocaImagem('./img/img3.png'); trocaCor('#d752b1')" alt="starbucks espreso">
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>

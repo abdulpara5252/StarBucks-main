@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {                  
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-text {
+    width: 600px;
+}
+
+.main-image {
+    width: 700px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 45px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    color: #333;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+span {
+    color: #017143;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Initial styles for Buy Now button */
+button {
+    position: relative;
+    background-color: #017143;
+    color: #fff;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+    overflow: hidden; /* Ensures wave stays within button boundaries */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #fff; /* Changes background to white */
+    color: #000; /* Changes text color to black */
+}
+
+button {
+    background-color: #017143;
+    color: #fff;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect with wave (swell) animation */
+button:hover {
+    animation: hoverSwell 0.7s forwards;
+}
+
+/* Keyframes for wave/swell effect */
+@keyframes hoverSwell {
+    0% {
+        transform: scale(1); /* Original size */
+        background-color: #017143;
+        color: #fff;
+    }
+    50% {
+        transform: scale(1.1); /* Swells at 50% */
+        background-color: #000;
+        color: #fff;
+    }
+    100% {
+        transform: scale(1); /* Returns to original size */
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+.logo {
+    width: 60px;
+}
+
+.starbucks {
+    width: 340px;
+    transition: transform 1s;
+    animation: upDown 10s infinite ease-in-out; /* Apply the animation */
+}
+
+.menu-image {
+    width: 80px;
+    transition: 1s;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.menu-image:hover {
+    transform: translateY(-25px);
+}
+
+.circular {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    top: 0;
+    left: 0;
+    clip-path: circle(600px at right 800px);
+    z-index: -1;
+
+}
+@keyframes upDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+/* Loader styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143; /* Background color of loader */
+    z-index: 9999; /* Ensure loader is on top */
+    animation: wave 1.5s ease-in-out forwards;
+}
+
+/* Keyframes for wave effect */
+@keyframes wave {
+    0% {
+        clip-path: circle(0% at 50% 50%);
+    }
+    50% {
+        clip-path: circle(150% at 50% 50%);
+    }
+    100% {
+        clip-path: circle(0% at 50% 50%);
+    }
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); /* Slight upward movement */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move back to original position */
+    }
+}
+
+/* Apply fade-in animation to the main text */
+.main-text h2,
+.main-text p {
+    animation: fadeIn 1s ease forwards; /* Adjust duration as needed */
+    opacity: 0; /* Start with the text hidden */
+}
+
+/* Delay for the paragraph */
+.main-text p {
+    animation-delay: 0.5s; /* Delay the paragraph fade-in */
+}
+
+
+
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Loader Styles */
+.loader1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff; /* Loader background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    animation: fadeOut 3s forwards; /* Animate fade out */
+}
+
+/* Loader Image Styles */
+.loader-image {
+    width: 200px; /* Adjust size as needed */
+    animation: zoomIn 1s ease forwards; /* Optional zoom in effect */
+}
+
+/* Content Styles */
+.content {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Fade Out Animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden; /* Hide the loader */
+    }
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
